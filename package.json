@@ -1,0 +1,42 @@
+{
+  "name": "tekchoice-microsite-boilerplate-react",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm dev",
+    "build": "npm build",
+    "start": "npm start",
+    "lint": "npm lint",
+    "test": "jest --watch"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "@mantine/core": "^7.8.0",
+    "@mantine/hooks": "^7.8.0",
+    "@reduxjs/toolkit": "^2.2.3",
+    "@tanstack/react-query": "^5.31.0",
+    "axios": "^1.6.8",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.51.3",
+    "react-redux": "^9.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^15.0.2",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18.2.25",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.2",
+    "jest": "^29.7.0",
+    "postcss": "^8.4.38",
+    "postcss-preset-mantine": "^1.14.4",
+    "postcss-simple-vars": "^7.0.1",
+    "tailwindcss": "^3.4.1",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5"
+  }
+}
