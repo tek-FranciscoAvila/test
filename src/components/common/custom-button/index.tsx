@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import {FC} from 'react';
 import {Box, Button} from "@mantine/core";
 import {CustomButtonProps} from "@/interfaces";
 
