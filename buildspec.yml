@@ -18,9 +18,6 @@ phases:
   post_build:
     commands:
       - if [[ $CODEBUILD_BUILD_SUCCEEDING == 0 ]]; then exit 1; fi
-      - |
-        #!/bin/bash
-        aws s3 rm --recursive s3://${BUCKET}/assets/
       - echo Build completed
 artifacts:
   files:
