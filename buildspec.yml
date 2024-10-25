@@ -1,0 +1,29 @@
+version: 0.2
+env:
+  shell: bash
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - n 20
+  pre_build:
+    commands:
+      - echo Installing dependencies...
+      - yarn install
+  build:
+    commands:
+      - echo Building...
+      - yarn run build
+  post_build:
+    commands:
+      - if [[ $CODEBUILD_BUILD_SUCCEEDING == 0 ]]; then exit 1; fi
+      - |
+        #!/bin/bash
+        aws s3 rm --recursive s3://${BUCKET}/assets/
+      - echo Build completed
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: out
