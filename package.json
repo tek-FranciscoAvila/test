@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm dev",
-    "build": "npm build",
-    "start": "npm start",
-    "lint": "npm lint",
-    "test": "jest --watch"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -28,6 +27,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18.2.25",
+    "@vitejs/plugin-react": "^4.2.1",
     "babel-jest": "^29.7.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.2",
@@ -37,6 +37,7 @@
     "postcss-simple-vars": "^7.0.1",
     "tailwindcss": "^3.4.1",
     "ts-jest": "^29.1.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite": "^5.4.9"
   }
 }
