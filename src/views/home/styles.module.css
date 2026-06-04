@@ -1,3 +1,15 @@
-.main{
-    @apply bg-red-100 min-h-[100vh] flex flex-col justify-center items-center;
+.formStyle {
+  @apply bg-background  flex flex-col justify-center items-center space-y-4 mt-10;
+}
+
+.buttonStyle {
+  @apply bg-primary rounded-md p-2 text-white border-none w-40 text-center font-bold hover:bg-secondary;
+}
+
+.titleStyle {
+  @apply text-white;
+}
+
+.inputStyle {
+  @apply flex flex-col;
 }

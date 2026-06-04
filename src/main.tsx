@@ -1,14 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'
-import App from './App';
-import '@mantine/core/styles.css';
-import './App.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "@mantine/core/styles.css";
+import { TenantProvider } from "./context/TenantContext";
+import App from "./App";
 
-const rootElement = document.getElementById('root');
-if (rootElement) {
-  ReactDOM.createRoot(rootElement).render(
-    <React.StrictMode>
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <TenantProvider>
       <App />
-    </React.StrictMode>,
-  );
-}
+    </TenantProvider>
+  </React.StrictMode>
+);
