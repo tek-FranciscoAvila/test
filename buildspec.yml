@@ -9,6 +9,12 @@ phases:
       - n 20
   pre_build:
     commands:
+      - echo "Retrieving secret from Secrets Manager..."
+      - SECRET_VALUE=$(aws secretsmanager get-secret-value --secret-id $Environment-$AppName-aws-secret  --query SecretString --output text)
+      - echo "Retrieving parameter from Parameter Store..."
+      - PARAMETER_VALUE=$(aws ssm get-parameter --name $Environment-$AppName-paramenter-environment-variables --with-decryption --query Parameter.Value --output text)
+      - echo "${SECRET_VALUE}" > .env
+      - echo "${PARAMETER_VALUE}" >> .env
       - echo Installing dependencies...
       - yarn install
   build:

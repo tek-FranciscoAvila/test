@@ -1,14 +1,11 @@
-// import { Provider } from 'react-redux';
-import { MantineProvider } from '@mantine/core';
-import { theme } from '@/configs';
+import { HomeView } from "@/views/home";
+import { MantineProviderBase } from "./context/MantineProvider";
 
 const App: React.FC = () => {
   return (
-    <MantineProvider theme={theme}>
-      <h1>
-        Hello world!
-      </h1>
-    </MantineProvider>
+    <MantineProviderBase>
+      <HomeView />
+    </MantineProviderBase>
   );
 };
 
