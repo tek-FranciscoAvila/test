@@ -6,21 +6,21 @@ phases:
     runtime-versions:
       nodejs: latest
     commands:
-      - n 20
+      - n 24
   pre_build:
     commands:
       - echo Installing dependencies...
-      - yarn install
+      - npm ci
   build:
     commands:
       - echo Building...
-      - yarn run build
+      - npm run build
   post_build:
     commands:
       - if [[ $CODEBUILD_BUILD_SUCCEEDING == 0 ]]; then exit 1; fi
       - echo Build completed
 artifacts:
   files:
-    - "**/*"
+    - '**/*'
   discard-paths: no
   base-directory: out
